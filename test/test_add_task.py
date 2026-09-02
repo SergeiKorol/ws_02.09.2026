@@ -1,6 +1,13 @@
 import requests
  #создать задачу, изменить и проверить что ИД не поменялся
 def test_add_edit():
+    '''тест, который:
+     -создает новое задание
+     - сохраняет id
+     - изменяет заголовок данного задания
+     - проверяет статус, id, заголовок
+    '''
+
     body = {"title":"new_task_S","completed":False}
     response = requests.post("https://todo-app-sky.herokuapp.com/", json=body)
     
