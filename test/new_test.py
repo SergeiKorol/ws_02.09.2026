@@ -1,6 +1,9 @@
 import requests
 
+
 def test_add():
+    """ Создание задачи и изменение её статуса, тест проверка, что всё получилось"""
+
     # Создаем задачу и получаем её id
     body = {"title":"taska","completed":False}
     response = requests.post("https://todo-app-sky.herokuapp.com/", json=body)
